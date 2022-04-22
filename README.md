@@ -31,5 +31,12 @@ localhost:8000/news/get_news?q=<query> - Search News
 The latencies for the initial requests are noticeably longer than subsequent queries at the same endpoint, as the news are fetched from the external APIs.
 Later hits on the same endpoint are cached for a period of time (1 day by default).
 
+## Testcases
+There are test cases defined for different requests simulated at our API endpoints and are checked for correct response status codes. To run the test case suite, run the following command while in the top-most directory of the project:
+``` 
+python manage.py test
+```
+
+
 ## Additional Items
 To better visualize the results of the news aggregator, we serve an HTML page with the results. The HTML page contains container elements with hyperlinks for each article returned from the API query.
