@@ -9,13 +9,9 @@ class News(models.Model):
     # JSON object containing all articles for specified parameters
     headline = models.TextField()
     # date of fetch stored to calculate expiry date while searching
-    saved_at_date = models.DateField()
+    saved_at_date = models.TextField()
     urls = models.TextField()
     source = models.TextField()
-
-    # def __str__(self) -> str:
-    #     print(type(self.headline))
-    #     return str([self.headline, self.urls, self.source])
 
     def getSavedDate(self):
         return self.saved_at_date
